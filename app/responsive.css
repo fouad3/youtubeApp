@@ -7,7 +7,7 @@
 }
 
 
-@media screen and (max-width: 645px) {
+@media screen and (max-width: 685px) {
 
     header {
         background-color: red;
@@ -49,7 +49,30 @@
     div.mobileFilter {
         visibility: visible;
         margin: 3em 6em;
+    }
+    div.loading i {
+        margin : 80% 50%;
+        font-size: 3em;
+    }
+    section#channelInfo img.channelBanner {
+        top: -0.5em;
+        height: 10em;
+    }
+    section#channelInfo img.thumb {
+        top: 7em;
+        transform: scale(0.7, 0.7);
+    }
+
+    section#channelInfo span.title{
+        font-size: 1.5em;
+    }
+    section#channelInfo i.youtubeIcon {
+        font-size: 0.9em;
 
 
+    }
+
+    section#channelInfo span.text{
+        font-size: 0.9em;
     }
 }
