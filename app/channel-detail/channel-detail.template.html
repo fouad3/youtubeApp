@@ -1,0 +1,21 @@
+
+<section id="channelInfo">
+    <img class="channelBanner" ng-src="{{$ctrl.channel.brandingSettings.image.bannerImageUrl}}" alt="{{$ctrl.channel.brandingSettings.title}}" />
+    <img class="thumb" ng-src="{{$ctrl.channel.snippet.thumbnails.high.url}}" alt="{{$ctrl.channel.snippet.localized.title}}" />
+
+    <span class="title">{{$ctrl.channel.snippet.localized.title}}</span>
+    <i class="fab fa-youtube youtubeIcon"> SUBSCRIBE</i>
+    <span class="text">
+        {{$ctrl.channel.statistics.subscriberCount|number}}
+    </span>
+</section>
+
+
+
+
+
+
+<playlists playlists="$ctrl.playlists"></playlists>
+
+<videos videos="$ctrl.videos"></videos>
+

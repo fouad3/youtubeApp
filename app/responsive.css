@@ -1,0 +1,55 @@
+@media screen and (min-width: 850px) {
+    main, .inner__header,#content {
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@media screen and (max-width: 645px) {
+
+    header {
+        background-color: red;
+    }
+
+    iframe {
+        margin-top: -6px;
+        width: 100%;
+        height: 15em;
+    }
+
+    div.header_logo i{
+        float: left;
+        font-size: 2.5em;
+        margin: 0.4em 0.6em;
+        color:white;
+    }
+    div.header_logo span  {
+       display: none;
+    }
+
+    form.searchBar button {
+        background: red;
+        color: white;
+        border: none;
+    }
+
+    span.title{
+        -webkit-line-clamp: 3;
+    }
+
+    span.content {
+        -webkit-line-clamp: 3;
+    }
+
+    div#filter {
+        display: none;
+    }
+    div.mobileFilter {
+        visibility: visible;
+        margin: 3em 6em;
+
+
+    }
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app="youtubeApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Youtube App</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="responsive.css">
+
+  
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="ng-youtube-embed.min.js"></script>
+    <script src="search/search.module.js"></script>
+    <script src="search/search.component.js"></script>
+    <script src="channel-detail/channel-detail.module.js"></script>
+    <script src="channel-detail/channel-detail.component.js"></script>
+    <script src="video-detail/video-detail.module.js"></script>
+    <script src="video-detail/video-detail.component.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/header-content/header-content.module.js"></script>
+    <script src="core/header-content/header-content.component.js"></script>
+    <script src="core/videos/videos.module.js"></script>
+    <script src="core/videos/videos.component.js"></script>
+    <script src="core/playlists/playlists.module.js"></script>
+    <script src="core/playlists/playlists.component.js"></script>
+    <script src="core/video-duration/video-duration.filter.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+  </head>
+  <body>
+
+    <header>
+        <div class="inner__header">
+          <header-content></header-content>
+        </div>
+    </header>
+
+    <main>
+        <section id="content">
+          <ui-view></ui-view>
+        </section>
+    </main>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<div  class="loading" ng-if="$ctrl.loading">
+    <i class="fa fa-circle-o-notch fa-spin" ></i>
+</div>
+
+<div id="filter">
+    <button ng-show="$ctrl.queryVal&&!$ctrl.loading" class="filterBtn" ng-click="toggle()"> <i class="fas fa-filter" style="font-size: 15px;"></i></button>
+    <span ng-show="$ctrl.toggle">
+        <select ng-model="$ctrl.firstFilter" ng-change="select()">
+            <option value="any time">any time</option>
+            <option value="Last hour">Last hour</option>
+            <option value="Today">Today</option>
+            <option value="This week">This week</option>
+            <option value="This month">This month</option>
+        </select>
+    </span>
+
+    <span ng-show="$ctrl.toggle">
+        <select ng-model="$ctrl.secondFilter" ng-change="select()">
+            <option value="all">All</option>
+            <option value="video">Video</option>
+            <option value="channel">Channel</option>
+            <option value="playlist">Playlist</option>
+        </select>
+    </span>
+
+    <span ng-show="$ctrl.toggle">
+        <select ng-model="$ctrl.thirdFilter" ng-change="select()">
+            <option value="relevance">Relevance</option>
+            <option value="date">Upload date</option>
+            <option value="viewCount">View count</option>
+            <option value="rating">Rating</option>
+        </select>
+    </span>
+</div>
+
+<div class="mobileFilter" ng-show="$ctrl.queryVal&&!$ctrl.loading">
+
+    <span>
+        <select ng-model="$ctrl.secondFilter" ng-change="select()">
+            <option value="all">All</option>
+            <option value="video">Video</option>
+            <option value="channel">Channel</option>
+            <option value="playlist">Playlist</option>
+        </select>
+    </span>
+
+    <span>
+        <select ng-model="$ctrl.thirdFilter" ng-change="select()">
+            <option value="relevance">Relevance</option>
+            <option value="date">Upload date</option>
+            <option value="viewCount">View count</option>
+            <option value="rating">Rating</option>
+        </select>
+    </span>
+</div>
+
+
+<section id="channels">
+    <ul class="snippets">
+        <li ng-repeat="channel in $ctrl.channels">
+            <a class="thumb" ui-sref="channel({channelId: channel.id, queryVal: $ctrl.queryVal})">
+                <img ng-src="{{channel.snippet.thumbnails.high.url}}" alt="{{channel.snippet.localized.title}}" />
+            </a>
+            <div class="channelInfo">
+                <span class="title">{{channel.snippet.localized.title}}</span>
+                <span class="content">
+                    {{channel.statistics.videoCount}} videos
+                    <br>
+                    {{channel.statistics.subscriberCount|number}} subscribers
+                </span>
+            </div>
+        </li>
+    </ul>
+</section>
+
+
+
+<playlists playlists="$ctrl.playlists"></playlists>
+
+<videos videos="$ctrl.videos"></videos>
+

@@ -1,0 +1,17 @@
+<section id="videos">
+    <ul class="snippets">
+        <li ng-repeat="video in $ctrl.videos">
+            <a  class="thumb" ui-sref="video({videoId: video.id, queryVal: $ctrl.queryVal})">
+                <img ng-src="{{video.snippet.thumbnails.medium.url}}" alt="{{video.snippet.localized.title}}" />
+                <span class="duration">{{video.contentDetails.duration|videoDuration}}</span>
+            </a>
+            <span class="title">{{video.snippet.localized.title}}</span>
+            <span class="content">
+                {{video.snippet.channelTitle}}
+                <br>
+                {{video.statistics.viewCount | number}} views
+            </span>
+        </li>
+    </ul>
+</section>
+

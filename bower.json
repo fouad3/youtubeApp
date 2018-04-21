@@ -1,0 +1,11 @@
+{
+  "name": "angular-youtube",
+  "description": "A responsive youtube app built with AngularJs",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-mocks": "1.5.x",
+    "angular-ui-router": "1.0.x"
+  }
+
+}

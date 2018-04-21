@@ -1,0 +1,16 @@
+<section id="playlists">
+    <ul class="snippets">
+        <li ng-repeat="playlist in $ctrl.playlists">
+            <a class="thumb" ui-sref="video({playlistId: playlist.id, queryVal: $ctrl.queryVal})">
+                <img ng-src="{{playlist.snippet.thumbnails.medium.url}}" alt="{{playlist.snippet.title}}" />
+                <span class="itemCount">{{playlist.contentDetails.itemCount}}</span>
+            </a>
+            <span class="title">{{playlist.snippet.title}}</span>
+            <span class="content">
+                {{playlist.snippet.channelTitle}}
+                <br>
+                view full playlist ({{playlist.contentDetails.itemCount}} videos)
+            </span>
+        </li>
+    </ul>
+</section>
